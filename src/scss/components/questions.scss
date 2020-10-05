@@ -1,0 +1,66 @@
+@import "../variables";
+@import "../mixins";
+
+.questions {
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .questions__item {
+    width: 290px;
+    background-color: $color-blue;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__item-title {
+    @include font-NotoSansJP-Bold;
+    color: $color-white;
+    font-size: 22px;
+    line-height: 29px;
+    margin-bottom: 10px;
+  }
+
+  &__item-answer {
+    color: $color-white;
+    margin-bottom: 15px;
+  }
+
+  &__item-list {
+    li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url("../../img/icons/checkbox-yellow.svg");
+        background-repeat: no-repeat;
+        background-position: 0 3px;
+      }
+    }
+  }
+
+  &__item-button {
+    width: 100%;
+    padding: 14px 10px 13px;
+    min-height: 50px;
+  }
+}
