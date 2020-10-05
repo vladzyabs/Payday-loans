@@ -71,5 +71,12 @@
 
   &__button-wrapper {
     margin-bottom: 40px;
+
+    button {
+      box-shadow: 0 22px 20px -12px rgba(255, 201, 60, 0.35);
+      padding: 19px 10px 18px;
+      min-width: 260px;
+      min-height: 60px;
+    }
   }
 }
