@@ -1,2 +1,46 @@
+@import "libs/normalize";
 @import "mixins";
 @import "fonts";
+@import "components/header";
+
+body {
+  @extend %font-NotoSansJP-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.text-color-yellow {
+  color: $color-yellow;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+@media (min-width: 575.98px){
+  .container {
+    max-width: 540px;
+    margin: auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: 767.98px){
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1199.98px){
+  .container {
+    max-width: 1170px;
+  }
+}
