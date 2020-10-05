@@ -2,6 +2,7 @@
 @import "mixins";
 @import "fonts";
 @import "components/header";
+@import "components/main";
 
 body {
   @extend %font-NotoSansJP-Regular;
