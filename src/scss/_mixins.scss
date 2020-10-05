@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
     font-family: $font_name;
@@ -9,12 +11,12 @@
 }
 
 // fonts
-%font-KumbhSans-Bold {font-family: 'KumbhSans-Bold', sans-serif;}
-%font-NotoSansJP-Black {font-family: 'NotoSansJP-Black', sans-serif;}
-%font-NotoSansJP-Bold {font-family: 'NotoSansJP-Bold', sans-serif;}
-%font-NotoSansJP-Light {font-family: 'NotoSansJP-Light', sans-serif;}
-%font-NotoSansJP-Medium {font-family: 'NotoSansJP-Medium', sans-serif;}
-%font-NotoSansJP-Regular {font-family: 'NotoSansJP-Regular', sans-serif;}
-%font-NotoSansJP-Thin {font-family: 'NotoSansJP-Thin', sans-serif;}
-%font-ProximaNova-Bold {font-family: 'ProximaNova-Bold', sans-serif;}
-%font-ProximaNova-Regular {font-family: 'ProximaNova-Regular', sans-serif;}
+@mixin font-KumbhSans-Bold {font-family: 'KumbhSans-Bold', sans-serif;}
+@mixin font-NotoSansJP-Black {font-family: 'NotoSansJP-Black', sans-serif;}
+@mixin font-NotoSansJP-Bold {font-family: 'NotoSansJP-Bold', sans-serif;}
+@mixin font-NotoSansJP-Light {font-family: 'NotoSansJP-Light', sans-serif;}
+@mixin font-NotoSansJP-Medium {font-family: 'NotoSansJP-Medium', sans-serif;}
+@mixin font-NotoSansJP-Regular {font-family: 'NotoSansJP-Regular', sans-serif;}
+@mixin font-NotoSansJP-Thin {font-family: 'NotoSansJP-Thin', sans-serif;}
+@mixin font-ProximaNova-Bold {font-family: 'ProximaNova-Bold', sans-serif;}
+@mixin font-ProximaNova-Regular {font-family: 'ProximaNova-Regular', sans-serif;}

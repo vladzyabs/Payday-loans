@@ -39,7 +39,7 @@
   }
 
   &__logo {
-    @extend %font-ProximaNova-Bold;
+    @include font-ProximaNova-Bold;
     color: #fff;
     font-size: 16px;
     line-height: 23px;
@@ -47,7 +47,7 @@
   }
 
   &__button {
-    @extend %font-NotoSansJP-Black;
+    @include font-NotoSansJP-Black;
     color: #fff;
     font-size: 13px;
     line-height: 19px;
