@@ -2,10 +2,23 @@
 @import "../mixins";
 
 .steps {
+  padding-top: 40px;
   color: $color-black-blue;
 
   &__title-wrapper {
     margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      & {
+        margin-bottom: 50px;
+
+        h2 {
+          text-align: center;
+          font-size: 38px;
+          line-height: 49px;
+        }
+      }
+    }
 
     h2 {
       @include font-NotoSansJP-Black;
@@ -17,8 +30,21 @@
   &__items {
     display: flex;
     align-items: stretch;
+    justify-content: space-between;
     overflow-x: scroll;
     margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      & {
+        margin-bottom: 50px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      & {
+        overflow-x: auto;
+      }
+    }
   }
 
   .step {
@@ -31,6 +57,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    @media (min-width: 1024px) {
+      & {
+        width: 270px;
+        min-width: 228px;
+      }
+    }
 
     &__number {
       @include font-KumbhSans-Bold;
@@ -45,6 +78,12 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 15px;
+
+      @media (min-width: 768px) {
+        & {
+          margin-bottom: 20px;
+        }
+      }
 
       &:after {
         position: absolute;
@@ -62,6 +101,13 @@
       font-size: 18px;
       line-height: 23px;
       margin-bottom: 10px;
+
+      @media (min-width: 768px) {
+        & {
+          font-size: 22px;
+          line-height: 29px;
+        }
+      }
     }
 
     &__desc {
@@ -71,6 +117,20 @@
 
   &__button-wrapper {
     margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      & {
+        margin-bottom: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        button {
+          width: 100%;
+          max-width: 569px;
+        }
+      }
+    }
 
     button {
       box-shadow: 0 22px 20px -12px rgba(255, 201, 60, 0.35);
