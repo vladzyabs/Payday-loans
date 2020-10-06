@@ -7,11 +7,29 @@ $form-position-top-mb: 145px;
   background-color: $color-blue;
   padding-top: 20px;
   border-radius: 0 0 16px 16px;
-  margin-bottom: 150px;
+  margin-bottom: 570px;
+
+  @media (min-width: 375px) {
+    & {
+      margin-bottom: 520px;
+    }
+  }
+
+  @media (min-width: 425px) {
+    & {
+      margin-bottom: 485px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      margin-bottom: 210px;
+    }
+  }
 
   @media (min-width: 990px) {
     & {
-      margin-bottom: 100px;
+      margin-bottom: 135px;
     }
   }
 
@@ -19,7 +37,7 @@ $form-position-top-mb: 145px;
     position: relative;
     padding-bottom: $form-position-top-mb;
 
-    @media (min-width: 990px) {
+    @media (min-width: 768px) {
       & {
         display: flex;
         align-items: flex-start;
@@ -46,6 +64,12 @@ $form-position-top-mb: 145px;
           line-height: 61px;
           margin-bottom: 15px;
         }
+      }
+    }
+
+    @media (min-width: 768px) {
+      & {
+        max-width: 400px;
       }
     }
 
@@ -85,6 +109,9 @@ $form-position-top-mb: 145px;
     border: 3px solid $color-yellow;
     border-radius: 8px;
     color: $color-black-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__title {
       margin-bottom: 15px;
@@ -95,6 +122,13 @@ $form-position-top-mb: 145px;
         line-height: 34px;
         text-transform: uppercase;
         margin-bottom: 5px;
+
+        @media (min-width: 768px) {
+          & {
+            font-size: 32px;
+            line-height: 42px;
+          }
+        }
       }
     }
 
@@ -105,14 +139,13 @@ $form-position-top-mb: 145px;
     }
 
     &__advantages {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
     }
 
     &__advantages-item {
-      width: 125px;
+      width: 100%;
       display: flex;
       align-items: center;
       margin-bottom: 10px;
@@ -133,17 +166,138 @@ $form-position-top-mb: 145px;
       }
     }
 
-    @media (min-width: 990px) {
+    @media (min-width: 768px) {
       & {
         position: relative;
         max-width: 400px;
-        min-height: 575px;
       }
     }
 
     @media (min-width: 1200px) {
       & {
         max-width: 470px;
+      }
+    }
+  }
+
+  .form-wrapper {
+    width: 100%;
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .select-box-wrapper {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      label, select, span {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      label {
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: 500;
+      }
+
+      select, span {
+        border: none;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: 700;
+      }
+    }
+
+    .range {
+      margin-top: 10px + 7px;
+      margin-bottom: 25px;
+    }
+
+    .form__inputs {
+
+      .input-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      label {
+        position: absolute;
+        left: 14px;
+        top: -10px;
+        background: #fff;
+        padding: 0 5px;
+        transition: .2s;
+        transform-origin: bottom;
+        opacity: 0;
+        z-index: -1;
+        transform: translate(0, 25px);
+        font-size: 16px;
+        line-height: 23px;
+      }
+
+      input:active + label, input:focus + label {
+        z-index: 100;
+        opacity: 1;
+        transform: translate(0, 0);
+        font-size: 12px;
+        line-height: 17px;
+      }
+
+      input:active::placeholder, input:focus::placeholder {
+        color: transparent;
+      }
+
+      input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid $color-black-blue;
+        color: $color-black-blue;
+        font-size: 16px;
+        line-height: 23px;
+        border-radius: 5px;
+        padding: 13px 15px;
+
+        &:hover, &:focus, &:active {
+          border: 2px solid $color-blue;
+        }
+      }
+    }
+
+    .form-btn {
+      @include font-NotoSansJP-Bold;
+      padding: 14px 10px;
+      box-shadow: 0px 22px 20px -12px rgba(255, 201, 60, 0.35);
+      margin-bottom: 20px;
+    }
+  }
+
+  .form-block__sub {
+    .form-block__sub-f {
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      &-pic {
+        margin-right: 7px;
+      }
+    }
+
+    .form-block__sub-s {
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+
+      @media (min-width: 768px) {
+        & {
+          text-align: center;
+        }
       }
     }
   }

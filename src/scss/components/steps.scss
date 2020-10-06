@@ -2,6 +2,7 @@
 @import "../mixins";
 
 .steps {
+  padding-top: 40px;
   color: $color-black-blue;
 
   &__title-wrapper {
