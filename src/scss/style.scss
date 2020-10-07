@@ -37,6 +37,10 @@ body {
   text-align: center;
   border-radius: 5px;
 
+  &:hover {
+    background-color: darken($color-yellow, 10);
+  }
+
   @media (min-width: 768px) {
     & {
       font-size: 18px;
