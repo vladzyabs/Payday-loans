@@ -3,6 +3,8 @@
 
 .header {
   background: $color-blue;
+  position: relative;
+  z-index: 500;
 
   &__content {
     min-height: 60px;
@@ -11,7 +13,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
       & {
         min-height: 90px;
       }
@@ -24,6 +26,7 @@
   }
 
   .burger-menu {
+    cursor: pointer;
     width: 22px;
     height: 16px;
     display: flex;
@@ -36,11 +39,27 @@
       height: 2px;
       background-color: $color-yellow;
       margin-bottom: 5px;
+      transition: .2s;
 
       &:last-child {
         width: 12px;
         margin-bottom: 0;
       }
+    }
+  }
+
+  .burger-menu.burger__close {
+    .burger-menu__line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu__line:nth-child(2) {
+      transform: scale(0);
+    }
+
+    .burger-menu__line:nth-child(3) {
+      width: 22px;
+      transform: rotate(-45deg) translate(5px, -5px);
     }
   }
 
@@ -51,7 +70,7 @@
     line-height: 23px;
     text-transform: uppercase;
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
       & {
         font-size: 24px;
         line-height: 35px;
@@ -71,7 +90,7 @@
     padding: 8px 17px;
     background: transparent;
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
       & {
         font-size: 16px;
         line-height: 23px;

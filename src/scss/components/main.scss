@@ -208,6 +208,7 @@ $form-position-top-mb: 145px;
         border: none;
         font-family: "Noto Sans JP", sans-serif;
         font-weight: 700;
+        background: #fff;
       }
     }
 
@@ -293,6 +294,12 @@ $form-position-top-mb: 145px;
       font-size: 12px;
       line-height: 18px;
       text-align: left;
+
+      @media (min-width: 320px) and (max-width: 768px) {
+        & {
+          min-height: 55px;
+        }
+      }
 
       @media (min-width: 768px) {
         & {
