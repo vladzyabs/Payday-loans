@@ -22,7 +22,6 @@
       outline: none;
       border: none;
       z-index: 100;
-      //background: -webkit-linear-gradient(left, $color-yellow 0%, $color-yellow 25%, $color-blue-light 25%, $color-blue-light 100%);
 
       &::-webkit-slider-thumb {
         box-sizing: content-box;
@@ -34,6 +33,7 @@
         border: 6px solid $color-yellow;
         cursor: pointer;
         z-index: 200;
+        box-shadow: 0px 2px 5px rgba(14, 37, 50, 0.15);
 
         &:hover {
           border-color: darken($color-yellow, 10);
@@ -50,6 +50,7 @@
         border: 6px solid $color-yellow;
         cursor: pointer;
         z-index: 200;
+        box-shadow: 0px 2px 5px rgba(14, 37, 50, 0.15);
 
         &:hover {
           border-color: darken($color-yellow, 10);
@@ -62,19 +63,20 @@
     }
   }
 
-  &__value-left {
+  &__value-left, &__value-right {
     position: absolute;
     bottom: -40px;
-    left: 0;
     font-size: 14px;
     line-height: 20px;
+    font-family: Noto Sans JP, sans-serif;
+    opacity: 0.7;
+  }
+
+  &__value-left {
+    left: 0;
   }
 
   &__value-right {
-    position: absolute;
-    bottom: -40px;
     right: 0;
-    font-size: 14px;
-    line-height: 20px;
   }
 }
