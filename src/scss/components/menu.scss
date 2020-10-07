@@ -1,0 +1,66 @@
+@import "../variables";
+
+.menu {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 300;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $color-blue;
+  padding: 20px 0;
+  transform: translateX(-100%);
+  transition: .2s;
+
+  @media (min-width: 768px) {
+    & {
+      top: 90px;
+      min-height: auto;
+      transform: translateY(calc(-100% - 90px));
+    }
+
+    &.menu__show {
+      transform: translateY(0);
+      box-shadow: 0 2px 2px 0px rgba(0,0,0,.3)
+    }
+  }
+
+  &.menu__show {
+    transform: translateX(0);
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__nav-item {
+    margin-bottom: 10px;
+  }
+  &__nav-link {
+    position: relative;
+    color: #ffc93c;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: $color-yellow;
+      transform-origin: left;
+      transform: scale(0);
+      transition: .3s;
+    }
+
+    &:hover:after, &:focus:after {
+      transform: scale(1);
+    }
+  }
+}

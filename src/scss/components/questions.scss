@@ -17,7 +17,7 @@
   }
 
   .questions__item {
-    width: 290px;
+    width: 100%;
     background-color: $color-blue;
     padding: 25px;
     border-radius: 16px;
@@ -51,7 +51,8 @@
   }
 
   &__item-title {
-    @include font-NotoSansJP-Bold;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 900;
     color: $color-white;
     font-size: 22px;
     line-height: 29px;

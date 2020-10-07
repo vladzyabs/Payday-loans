@@ -7,29 +7,41 @@ $form-position-top-mb: 145px;
   background-color: $color-blue;
   padding-top: 20px;
   border-radius: 0 0 16px 16px;
-  margin-bottom: 570px;
+  margin-bottom: 590px;
 
-  @media (min-width: 375px) {
+  @media (min-width: 361px) {
+    & {
+      margin-bottom: 555px;
+    }
+  }
+
+  @media (min-width: 417px) {
     & {
       margin-bottom: 520px;
     }
   }
 
-  @media (min-width: 425px) {
+  @media (min-width: 470px) {
     & {
-      margin-bottom: 485px;
+      margin-bottom: 500px;
     }
   }
 
   @media (min-width: 768px) {
     & {
-      margin-bottom: 210px;
+      margin-bottom: 250px;
     }
   }
 
   @media (min-width: 990px) {
     & {
-      margin-bottom: 135px;
+      margin-bottom: 90px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    & {
+      margin-bottom: 70px;
     }
   }
 
@@ -51,7 +63,8 @@ $form-position-top-mb: 145px;
 
   &__title-wrapper {
     h1 {
-      @include font-NotoSansJP-Bold;
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 900;
       color: $color-white;
       font-size: 28px;
       line-height: 41px;
@@ -117,7 +130,8 @@ $form-position-top-mb: 145px;
       margin-bottom: 15px;
 
       h2 {
-        @include font-NotoSansJP-Black;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: 900;
         font-size: 26px;
         line-height: 34px;
         text-transform: uppercase;
@@ -125,35 +139,46 @@ $form-position-top-mb: 145px;
 
         @media (min-width: 768px) {
           & {
-            font-size: 32px;
+            font-size: 26px;
             line-height: 42px;
+            margin-bottom: 10px;
+            text-align: center;
           }
         }
       }
     }
 
     &__title-desc {
-      @include font-NotoSansJP-Medium;
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 500;
       font-size: 18px;
       line-height: 26px;
+
+      @media (min-width: 768px) {
+        & {
+          text-align: center;
+        }
+      }
     }
 
     &__advantages {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
       width: 100%;
+      margin-bottom: 26px;
+
+      @media (min-width: 768px) {
+        & {
+          margin-bottom: 30px;
+        }
+      }
     }
 
     &__advantages-item {
       width: 100%;
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
-      padding-right: 10px;
-
-      &:nth-child(2n) {
-        padding-right: 0;
-      }
 
       .advantages-item__icon {
         margin-right: 10px;
@@ -161,6 +186,8 @@ $form-position-top-mb: 145px;
 
       .advantages-item__desc {
         @include font-ProximaNova-Bold;
+        font-family: "Proxima Nova", sans-serif;
+        font-weight: 700;
         font-size: 14px;
         line-height: 17px;
       }
@@ -197,17 +224,13 @@ $form-position-top-mb: 145px;
       label, select, span {
         font-size: 18px;
         line-height: 26px;
-      }
-
-      label {
-        font-family: "Noto Sans JP", sans-serif;
-        font-weight: 500;
-      }
-
-      select, span {
-        border: none;
         font-family: "Noto Sans JP", sans-serif;
         font-weight: 700;
+      }
+
+      select {
+        border: none;
+        background: #fff;
       }
     }
 
@@ -218,9 +241,23 @@ $form-position-top-mb: 145px;
 
     .form__inputs {
 
+      @media (min-width: 990px) {
+        & {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
       .input-wrapper {
         position: relative;
         margin-bottom: 20px;
+
+        @media (min-width: 990px) {
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
       }
 
       label {
@@ -246,6 +283,12 @@ $form-position-top-mb: 145px;
         line-height: 17px;
       }
 
+      input::placeholder {
+        font-size: 16px;
+        line-height: 23px;
+        color: $color-black-blue;
+      }
+
       input:active::placeholder, input:focus::placeholder {
         color: transparent;
       }
@@ -267,15 +310,17 @@ $form-position-top-mb: 145px;
     }
 
     .form-btn {
-      @include font-NotoSansJP-Bold;
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 900;
       padding: 14px 10px;
-      box-shadow: 0px 22px 20px -12px rgba(255, 201, 60, 0.35);
+      box-shadow: 0 22px 20px -12px rgba(255, 201, 60, 0.35);
       margin-bottom: 20px;
     }
   }
 
   .form-block__sub {
     .form-block__sub-f {
+      font-weight: 500;
       font-size: 14px;
       line-height: 20px;
       text-transform: uppercase;
@@ -290,9 +335,17 @@ $form-position-top-mb: 145px;
     }
 
     .form-block__sub-s {
+      font-family: "Proxima Nova", sans-serif;
+      font-weight: 400;
       font-size: 12px;
       line-height: 18px;
       text-align: left;
+
+      @media (min-width: 320px) and (max-width: 768px) {
+        & {
+          min-height: 55px;
+        }
+      }
 
       @media (min-width: 768px) {
         & {
